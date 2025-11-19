@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O Futuro do Trabalho</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+      html, body, #root {
+        height: 100%;
+      }
+      html {
+        scroll-behavior: smooth;
+        /* Hide scrollbar for IE, Edge and Firefox */
+        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none;  /* IE 10+ */
+      }
+      
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden; /* Prevent horizontal scroll from animations */
+      }
+      ::selection {
+        background-color: rgba(34, 211, 238, 0.3);
+      }
+      .glow-shadow {
+        box-shadow: 0 0 15px rgba(34, 211, 238, 0.4), 0 0 30px rgba(34, 211, 238, 0.2);
+      }
+       .glow-shadow-purple {
+        box-shadow: 0 0 15px rgba(192, 132, 252, 0.4), 0 0 30px rgba(192, 132, 252, 0.2);
+      }
+
+      /* -- Animations -- */
+      @keyframes pulse-bg {
+        0%, 100% { opacity: 0.1; transform: scale(1); }
+        50% { opacity: 0.15; transform: scale(1.05); }
+      }
+      .animate-pulse-bg {
+        animation: pulse-bg 8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fadeInUp {
+        animation: fadeInUp 0.8s ease-out forwards;
+        opacity: 0; /* Start hidden */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-black text-slate-200">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
